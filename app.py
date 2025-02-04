@@ -5,7 +5,8 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Sembunyikan informasi & warning dari
 from flask import Flask, request, jsonify
 import pandas as pd
 import numpy as np
-from tf.keras.models import load_model
+import tensorflow as tf
+from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
 import pickle
 
