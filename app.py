@@ -93,8 +93,8 @@ def get_data_summary():
             'columns': df.columns.tolist(),
             'numerical_summary': df.describe().to_dict(),
             'missing_values': df.isnull().sum().to_dict(),
-            'first_timestamp': df['timestamp'].min() if 'timestamp' in df.columns else None,
-            'last_timestamp': df['timestamp'].max() if 'timestamp' in df.columns else None
+            'first_timestamp': df['ts'].min() if 'ts' in df.columns else None,
+            'last_timestamp': df['ts'].max() if 'ts' in df.columns else None
         }
         
         return jsonify(summary)
